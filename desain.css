@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: lightgray;
+}
+h1 {
+  color: yellow;
+}
+p {
+  color: blue;
+}
+bold {
+  font-weight: bold;
+}
+big {
+  font-size: larger;
+}
+li {
+  font-size: medium;
+  color: blueviolet;
+}
+del {
+  text-decoration: line-through;
+}
+h2 {
+  color: forestgreen;
+}
