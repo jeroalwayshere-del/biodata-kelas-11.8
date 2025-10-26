@@ -1,26 +1,28 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: lightgray;
+.biodata {
+  display: flex; /* makes text and image side by side */
+  justify-content: space-between; /* adds space between text & image */
+  align-items: center; /* vertically centers them */
+  background-color: #f8f8f8; /* light background */
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 10px;
+  width: 500px; /* optional, to control size */
 }
-h1 {
-  color: yellow;
+
+.biodata img {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  object-fit: cover; /* keeps image nicely cropped */
 }
-p {
-  color: blue;
+
+.info h2 {
+  margin-top: 0;
+  color: #333;
 }
-bold {
-  font-weight: bold;
+
+.info p {
+  margin: 5px 0;
 }
-big {
-  font-size: larger;
-}
-li {
-  font-size: medium;
-  color: blueviolet;
-}
-del {
-  text-decoration: line-through;
-}
-h2 {
-  color: forestgreen;
-}
+
+
