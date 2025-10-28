@@ -1,28 +1,97 @@
+/* === LATAR & TEKS UTAMA === */
+body {
+  background: linear-gradient(to right, lime, cyan);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0 40px;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* === BAGIAN GURU / WALI KELAS === */
+#guru {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: right;
+  margin-right: 60px;
+}
+
+#guru .judul {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+#guru .nama {
+  font-size: 22px;
+}
+
+/* === GRID UTAMA UNTUK BIODATA === */
+.baris-biodata {
+  display: grid;
+  grid-template-columns: repeat(
+    2,
+    minmax(320px, 450px)
+  ); /* 🔹 Batasi lebar tiap kolom */
+  column-gap: 80px; /* 🔹 Space kosong di tengah */
+  row-gap: 35px; /* 🔹 Jarak antar baris */
+  justify-content: center; /* 🔹 Grid tetap di tengah halaman */
+  margin-bottom: 40px;
+}
+
+/* === KOTAK BIODATA === */
 .biodata {
-  display: flex; /* makes text and image side by side */
-  justify-content: space-between; /* adds space between text & image */
-  align-items: center; /* vertically centers them */
-  background-color: #f8f8f8; /* light background */
-  border: 1px solid #ccc;
-  padding: 15px;
-  border-radius: 10px;
-  width: 500px; /* optional, to control size */
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Jarak kecil antara teks & foto */
+  background-color: #024d02;
+  color: white;
+  border-radius: 12px;
+  border: 2px solid #222;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 12px 15px;
+  height: auto;
+  box-sizing: border-box;
+  max-width: 450px; /* 🔹 Batasi lebar box */
 }
 
+/* === TEKS INFORMASI === */
+.biodata .info {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* === FOTO === */
 .biodata img {
-  width: 120px;
-  height: 120px;
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
   border-radius: 10px;
-  object-fit: cover; /* keeps image nicely cropped */
+  border: 2px solid #fff;
 }
 
-.info h2 {
-  margin-top: 0;
-  color: #333;
+/* === RESPONSIVE MOBILE === */
+@media (max-width: 768px) {
+  .baris-biodata {
+    grid-template-columns: 1fr; /* jadi 1 kolom */
+    column-gap: 0;
+    row-gap: 20px;
+  }
+
+  .biodata {
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 100%;
+  }
+
+  .biodata img {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
 }
-
-.info p {
-  margin: 5px 0;
-}
-
-
